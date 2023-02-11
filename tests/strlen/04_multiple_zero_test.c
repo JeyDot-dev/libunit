@@ -6,12 +6,12 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:44:41 by jsousa-a          #+#    #+#             */
-/*   Updated: 2023/02/11 13:48:31 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:06:15 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h";
-#include "libft.h";
+#include "libunit.h"
+#include "libft.h"
 
 int	multiple_zero_test(void)
 {

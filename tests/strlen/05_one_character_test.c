@@ -6,12 +6,12 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:44:57 by jsousa-a          #+#    #+#             */
-/*   Updated: 2023/02/11 13:49:13 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:06:23 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h";
-#include "libft.h";
+#include "libunit.h"
+#include "libft.h"
 
 int	one_character_test(void)
 {

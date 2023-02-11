@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jsousa-a <jsousa-a@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 15:29:29 by jsousa-a         ###   ########.fr       */
+/*   Created: 2023/02/11 15:14:56 by jsousa-a          #+#    #+#             */
+/*   Updated: 2023/02/11 15:27:47 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include "libft.h"
 #include "libunit.h"
-#include "tests.h"
+#include "libft.h"
 
-
-int	main(void)
+void	print_list(t_unit_test *head)
 {
-	ft_printf("hello world\n");
-	ft_printf("%s\n", ft_itoa(42));
-	strlen_launcher();
+	while (head != NULL)
+	{
+		ft_printf("%s\n", head->t_name);
+		ft_printf("%p\n", head->fn);
+		head = head->next;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 13:53:17 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 14:09:18 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:30:17 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	delete_list(t_unit_test **head)
 {
 	t_unit_test	*tmp;
 
-	while (head != NULL)
+	while (*head != NULL)
 	{
 		tmp = *head;
 		*head = (*head)->next;

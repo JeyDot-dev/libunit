@@ -1,20 +1,26 @@
-NAME = tests.a
-
-SRCS_PATH =./
-
-OBJS_PATH = ./objects
-
-SRCS_NAME = delete_list.c \
-			load_list.c \
+NAME 		= libtests.a
 
 
-SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_NAME))
+OBJS_PATH 	= ./objects
 
-LIBFTDIR = ../libft
+SRCS_STRLEN = 	00_launcher				01_basics_test			02_null_test\
+				03_bigger_str_test		04_multiple_zero_test\
+				05_one_character_test
 
+ALLSRCS 	= ${addprefix strlen/,${SRCS_STRLEN}}
+
+SRCS_NAME	= ${addsuffix .c,${ALLSRCS}}
+
+SRCS 		= ${SRCS_NAME}
+
+LIBFTDIR 	= ../libft
+
+HEADERS_DIR	= ../libunit	../libft
+
+INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 HEADER_DIR = ./
 
-FLAG = -Wall -Wextra -Werror -I$(HEADER_DIR)
+FLAG = -Wall -Wextra -Werror ${INCLUDES}
 
 CC = GCC $(FLAG)
 
@@ -24,20 +30,20 @@ OBJS = ${SRCS:.c=.o}
 	$(CC) -I$(LIBFTDIR) -o $@ -c $<
 
 ${NAME} : ${OBJS}
-	make -s -C ../libft
-	cp ../libft/libft.a ./$(NAME)
+#	make -s -C ../libft
+#	cp ../libft/libft.a ./$(NAME)
 	ar rcs $(NAME) $(OBJS)
-	#$(CC)   $(OBJS) -L. -lunit
+	ranlib ${NAME}
 
 all : ${NAME}
 
 clean :
 	rm -f ${OBJS} $(OBJS_BONUS)
-	$(MAKE) -C ../libft clean
+#	$(MAKE) -C ../libft clean
 
 fclean : clean
 	rm -f ${NAME}
-	$(MAKE) -C ../libft fclean
+#	$(MAKE) -C ../libft fclean
 
 re : fclean all
 

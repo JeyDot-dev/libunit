@@ -30,18 +30,21 @@ OBJS = ${SRCS:.c=.o}
 
 ${NAME} : ${OBJS}
 	make -s -C libunit
+	make -C tests
 	#ar rcs $(NAME) $(OBJS)
-	$(CC)   $(OBJS) -L$(DIRLIBUNIT) -lunit
+	$(CC)   $(OBJS) -L$(DIRLIBUNIT) -lunit -L${DIRTESTS} -ltests 
 
 all : ${NAME}
 
 clean :
 	rm -f ${OBJS} $(OBJS_BONUS)
 	$(MAKE) -C libunit clean
+	$(MAKE) -C tests clean
 
 fclean : clean
 	rm -f ${NAME}
 	$(MAKE) -C libunit fclean
+	$(MAKE) -C tests fclean
 
 re : fclean all
 
