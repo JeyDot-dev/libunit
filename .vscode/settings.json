@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.ejs": "plaintext",
+    "stdlib.h": "c",
+    "libunit.h": "c"
+  }
+}

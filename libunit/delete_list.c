@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_bigger_str_test.c                               :+:      :+:    :+:   */
+/*   delete_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 12:37:27 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 13:48:02 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 13:53:17 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/11 14:09:18 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libunit.h"
+#include "libft.h"
 
-#include "libunit.h";
-#include "libft.h";
-
-int	bigger_str_test(void)
+void	delete_list(t_unit_test **head)
 {
-	static const char	txt[] = "This is a longer text";
+	t_unit_test	*tmp;
 
-	if (ft_strlen(txt) == strlen(txt))
-		return (0);
-	else
-		return (-1);
+	while (head != NULL)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		free(tmp->t_name);
+		free(tmp);
+	}
 }

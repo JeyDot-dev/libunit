@@ -6,14 +6,14 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:36:19 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 12:38:37 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/11 13:47:22 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h";
 #include "libft.h";
 
-void	null_test(void)
+int	null_test(void)
 {
 	if (ft_strlen("") == 0)
 		return (0);

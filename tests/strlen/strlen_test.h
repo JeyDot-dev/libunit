@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   03_bigger_str_test.c                               :+:      :+:    :+:   */
+/*   strlen_test.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 12:37:27 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 13:48:02 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 13:45:53 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/11 14:35:43 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef STRLEN_TEST_H
+# define STRLEN_TEST_H
 
-#include "libunit.h";
-#include "libft.h";
+int	strlen_launcher(void);
+int	basic_test(void);
+int	null_test(void);
+int	bigger_str_test(void);
+int	multiple_zero_test(void);
+int	one_character_test(void);
 
-int	bigger_str_test(void)
-{
-	static const char	txt[] = "This is a longer text";
-
-	if (ft_strlen(txt) == strlen(txt))
-		return (0);
-	else
-		return (-1);
-}
+#endif
