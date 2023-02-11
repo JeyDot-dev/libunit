@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   samples.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 18:44:10 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 13:45:53 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/11 18:45:22 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include "samples/samples.h"
+#ifndef SAMPLES_H
+# define SAMPLES_H
 
-int	main(void)
-{
-	samples_launcher();
-}
+# include "libunit.h"
+
+int	samples_launcher(void);
+int	ok_test(void);
+int	failed_test(void);
+int	bus_error_test(void);
+int	segfault_test(void);
+
+#endif

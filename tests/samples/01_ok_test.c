@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   01_ok_test.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 18:44:10 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/11 18:26:21 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include "samples/samples.h"
+#include "samples.h"
 
-int	main(void)
+int	ok_test(void)
 {
-	samples_launcher();
+	if (1)
+		return (0);
+	else
+		return (-1);
 }

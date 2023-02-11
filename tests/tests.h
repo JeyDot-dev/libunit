@@ -6,8 +6,12 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 14:18:09 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 14:19:01 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/11 18:34:12 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "strlen/strlen_test.h"
+#ifndef TESTS_H
+# define TESTS_H
+#include "samples/samples.h"
+
+#endif

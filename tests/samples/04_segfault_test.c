@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   04_segfault_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 15:29:29 by jsousa-a         ###   ########.fr       */
+/*   Created: 2023/02/11 12:44:41 by jsousa-a          #+#    #+#             */
+/*   Updated: 2023/02/11 18:25:57 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-#include "libunit.h"
-#include "tests.h"
+#include "samples.h"
 
-
-int	main(void)
+int	segfault_test(void)
 {
-	ft_printf("hello world\n");
-	ft_printf("%s\n", ft_itoa(42));
-	strlen_launcher();
+	char	name[2];
+	int		i;
+
+	i = 1000000;
+	if (name[i])
+		return (0);
+	else
+		return (-1);
 }

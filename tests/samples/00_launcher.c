@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   00_launcher.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 18:44:10 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 12:24:04 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/11 18:53:57 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "samples.h"
 #include "libft.h"
-#include "samples/samples.h"
-
-int	main(void)
+int	samples_launcher(void)
 {
-	samples_launcher();
+	t_unit_test	*testlist;
+
+	testlist = NULL;
+	load_test(&testlist, "Test Ok", &ok_test);
+	load_test(&testlist, "Failed Test", &failed_test);
+	load_test(&testlist, "Bus Error", &bus_error_test);
+	load_test(&testlist, "Seg Fault", &segfault_test);
+	ft_printf("Sample Test Results\n");
+	launch_test("SAMPLES", testlist);
+	return (1);
+	// return (launch_tests(&testlist));
 }

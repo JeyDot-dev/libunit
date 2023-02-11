@@ -4,9 +4,10 @@ SRCS_PATH =./
 
 OBJS_PATH = ./objects
 
-SRCS_NAME = delete_list.c	load_list.c		print_list.c
-
-
+SRCS_NAME = delete_list.c \
+			load_list.c	\
+			print_list.c \
+			launch_test.c
 
 SRCS = $(addprefix $(SRCS_PATH)/,$(SRCS_NAME))
 

@@ -1,39 +1,43 @@
-NAME 		= libtests.a
+NAME 		= test_run
 
 
 OBJS_PATH 	= ./objects
 
-SRCS_STRLEN = 	00_launcher				01_basics_test			02_null_test\
-				03_bigger_str_test		04_multiple_zero_test\
-				05_one_character_test
+SRCS_SAMPLES = 	00_launcher				01_ok_test		02_failed_test\
+				03_bus_error_test		04_segfault_test
 
-ALLSRCS 	= ${addprefix strlen/,${SRCS_STRLEN}}
+ALLSRCS 	= ${addprefix samples/,${SRCS_SAMPLES}}
 
 SRCS_NAME	= ${addsuffix .c,${ALLSRCS}}
 
-SRCS 		= ${SRCS_NAME}
+SRCS 		= ${SRCS_NAME} main.c
+
+DIRLIBFT = "../libft"
+DIRLIBUNIT = "../framework"
 
 LIBFTDIR 	= ../libft
 
-HEADERS_DIR	= ../libunit	../libft
+HEADERS_DIR	= ../framework	../libft ./
 
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
-HEADER_DIR = ./
 
-FLAG = -Wall -Wextra -Werror ${INCLUDES}
+
+FLAG = -Wall -Wextra -Werror
 
 CC = GCC $(FLAG)
 
 OBJS = ${SRCS:.c=.o}
 
 %.o:%.c
-	$(CC) -I$(LIBFTDIR) -o $@ -c $<
+	$(CC) $(INCLUDES) -o $@ -c $<
 
 ${NAME} : ${OBJS}
-#	make -s -C ../libft
+	make -s -C ../framework
+	make -s -C ../libft
 #	cp ../libft/libft.a ./$(NAME)
-	ar rcs $(NAME) $(OBJS)
-	ranlib ${NAME}
+	# ar rcs $(NAME) $(OBJS)
+	# ranlib ${NAME}
+	$(CC)    $(OBJS) -o ${NAME} -L$(DIRLIBUNIT) -lunit
 
 all : ${NAME}
 
@@ -44,6 +48,9 @@ clean :
 fclean : clean
 	rm -f ${NAME}
 #	$(MAKE) -C ../libft fclean
+
+test : ${NAME}
+	./test_run
 
 re : fclean all
 
