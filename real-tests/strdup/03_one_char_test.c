@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:37:27 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 15:11:08 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:12:40 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@
 
 int	one_char_test(void)
 {
-	static const char	txt[] = "This is a longer text";
+	char *test;
+	int	result;
 
-	if (ft_strlen(txt) == strlen(txt))
+	test = ft_strdup("W");
+	result = strncmp(test, "W", 500);
+	if (test)
+		free(test);
+	if (result == 0)
 		return (0);
 	else
 		return (-1);
