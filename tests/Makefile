@@ -1,4 +1,4 @@
-NAME 		= test_run
+NAME 		= samples_test
 
 
 OBJS_PATH 	= ./objects
@@ -22,7 +22,7 @@ HEADERS_DIR	= ../framework	../libft ./
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -g -fsanitize=address
 
 CC = GCC $(FLAG)
 
@@ -34,7 +34,6 @@ OBJS = ${SRCS:.c=.o}
 ${NAME} : ${OBJS}
 	make -s -C ../framework
 	make -s -C ../libft
-#	cp ../libft/libft.a ./$(NAME)
 	# ar rcs $(NAME) $(OBJS)
 	# ranlib ${NAME}
 	$(CC)    $(OBJS) -o ${NAME} -L$(DIRLIBUNIT) -lunit
@@ -50,7 +49,7 @@ fclean : clean
 #	$(MAKE) -C ../libft fclean
 
 test : ${NAME}
-	./test_run
+	./${NAME}
 
 re : fclean all
 
