@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:44:41 by jsousa-a          #+#    #+#             */
-/*   Updated: 2023/02/12 16:20:48 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:01:07 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int	long_str_test(void)
 {
-	char *test;
-	int	result;
-	static char *blob = "But I must explain to you how all this mistaken idea of \
+	char		*test;
+	int			result;
+	static char	*blob = "But I must explain to you how all this mistaken idea of \
 		   	denouncing pleasure and praising pain was born and I will give you \
 		   	a complete account of the system, and expound the actual  \
 			teachings of the great explorer of the truth, the master-builder \
@@ -32,7 +32,6 @@ int	long_str_test(void)
 		   	to obtain some advantage from it?";
 
 	test = strdup(blob);
-
 	result = strncmp(test, blob, 4092);
 	if (test)
 		free(test);

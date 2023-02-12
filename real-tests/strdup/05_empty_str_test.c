@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:44:57 by jsousa-a          #+#    #+#             */
-/*   Updated: 2023/02/12 16:22:24 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:59:14 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	empty_str_test(void)
 {
-	char *test;
-	int	result;
+	char	*test;
+	int		result;
 
 	test = ft_strdup("");
 	result = strncmp(test, "", 20);

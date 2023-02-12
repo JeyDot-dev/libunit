@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 16:22:29 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:58:09 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	basic_test(void)
 {
-	char *test;
-	int	result;
+	char	*test;
+	int		result;
 
 	test = ft_strdup("Wapiti");
 	result = strncmp(test, "Wapiti", 500);
