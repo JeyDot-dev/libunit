@@ -23,7 +23,7 @@ HEADERS_DIR	= ../framework	../libft ./
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 
 
-FLAG = -Wall -Wextra -Werror -g -fsanitize=address
+FLAG = -Wall -Wextra -Werror
 
 CC = GCC $(FLAG)
 

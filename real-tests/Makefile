@@ -33,7 +33,7 @@ HEADERS_DIR	= ${DIRLIBFT} ${DIRLIBUNIT}
 
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 
-FLAG = -Wall -Wextra -Werror -g -fsanitize=address
+FLAG = -Wall -Wextra -Werror
 
 CC = GCC $(FLAG)
 
