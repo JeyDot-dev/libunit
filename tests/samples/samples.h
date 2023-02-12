@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 13:45:53 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 14:25:38 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/12 15:23:51 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int	failed_test(void);
 int	bus_error_test(void);
 int	segfault_test(void);
 int	timeout_test(void);
+int	write_test(void);
 
 #endif

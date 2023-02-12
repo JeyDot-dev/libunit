@@ -4,7 +4,8 @@ NAME 		= samples_test
 OBJS_PATH 	= ./objects
 
 SRCS_SAMPLES = 	00_launcher				01_ok_test		02_failed_test\
-				03_bus_error_test		04_segfault_test 05_timeout_test
+				03_bus_error_test		04_segfault_test 05_timeout_test\
+				05_write_test
 
 ALLSRCS 	= ${addprefix samples/,${SRCS_SAMPLES}}
 
@@ -22,7 +23,7 @@ HEADERS_DIR	= ../framework	../libft ./
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 
 
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -g -fsanitize=address
 
 CC = GCC $(FLAG)
 
@@ -48,8 +49,8 @@ fclean : clean
 	rm -f ${NAME}
 #	$(MAKE) -C ../libft fclean
 
-test : ${NAME}
-	./${NAME}
+test : all
+	./samples_test -i
 
 re : fclean all
 

@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:24:04 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 14:27:19 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/12 15:56:31 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	samples_launcher(void)
 	load_test(&testlist, "Bus Error", &bus_error_test);
 	load_test(&testlist, "Seg Fault", &segfault_test);
 	load_test(&testlist, "Timeout Test", &timeout_test);
+	load_test(&testlist, "Write Test", &write_test);
 	ft_printf("Sample Test Results\n");
 	return (launch_test("SAMPLES", testlist));
 }
