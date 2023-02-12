@@ -4,7 +4,7 @@ NAME 		= samples_test
 OBJS_PATH 	= ./objects
 
 SRCS_SAMPLES = 	00_launcher				01_ok_test		02_failed_test\
-				03_bus_error_test		04_segfault_test
+				03_bus_error_test		04_segfault_test 05_timeout_test
 
 ALLSRCS 	= ${addprefix samples/,${SRCS_SAMPLES}}
 
@@ -22,7 +22,7 @@ HEADERS_DIR	= ../framework	../libft ./
 INCLUDES	= ${addprefix -I,${HEADERS_DIR}}
 
 
-FLAG = -Wall -Wextra -Werror -g -fsanitize=address
+FLAG = -Wall -Wextra -Werror
 
 CC = GCC $(FLAG)
 

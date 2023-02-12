@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 15:39:30 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 10:58:48 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/12 12:36:04 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ int	launch_test(char *title, t_unit_test *head)
 		execute_test(title, *current, &total_tests, &passed_tests);
 		current = current->next;
 	}
-	return (1);
+	ft_printf("\n%s: %d/%d test passed\n", title, passed_tests, total_tests);
+	if (total_tests == passed_tests)
+		return (0);
+	return (-1);
 }

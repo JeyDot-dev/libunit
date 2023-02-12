@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/11 18:44:10 by srapopor         ###   ########.fr       */
+/*   Updated: 2023/02/12 12:42:53 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,10 @@
 
 int	main(void)
 {
-	samples_launcher();
+	int	routine_response;
+
+	routine_response = 0;
+	if (samples_launcher() == -1)
+		routine_response = -1;
+	return (routine_response);
 }
