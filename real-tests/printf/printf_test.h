@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   10_letters_number_test.c                           :+:      :+:    :+:   */
+/*   printf_test.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 16:03:24 by srapopor         ###   ########.fr       */
+/*   Created: 2023/02/11 13:45:53 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/12 16:34:07 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libunit.h"
-#include "libft.h"
+#ifndef PRINTF_TEST_H
+# define PRINTF_TEST_H
 
-int	letters_numbers_test(void)
-{
-	if (ft_atoi("fortytwo42") == 0)
-		return (0);
-	else
-		return (-1);
-}
+int	print_42_test(void);
+int	print_forty_two(void);
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 15:26:52 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:07:58 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	forty_two_test(void)
 {
-	if (1)
+	if (ft_atoi("42") == 42)
 		return (0);
 	else
 		return (-1);

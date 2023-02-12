@@ -6,7 +6,7 @@
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 15:28:38 by jsousa-a         ###   ########.fr       */
+/*   Updated: 2023/02/12 16:07:55 by srapopor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	zero_test(void)
 {
-	if (1)
-		return (1);
+	if (ft_atoi("0") == 0)
+		return (0);
 	else
 		return (-1);
 }
