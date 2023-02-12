@@ -43,14 +43,18 @@ all : ${NAME}
 
 clean :
 	rm -f ${OBJS} $(OBJS_BONUS)
-#	$(MAKE) -C ../libft clean
+	$(MAKE) -C ../libft clean
+	$(MAKE) -C ../framework clean
 
 fclean : clean
 	rm -f ${NAME}
-#	$(MAKE) -C ../libft fclean
+	rm -f test.log
+	$(MAKE) -C ../libft fclean
+	$(MAKE) -C ../framework fclean
 
 test : all
-	./samples_test -i
+	./samples_test > test.log
+	cat test.log
 
 re : fclean all
 

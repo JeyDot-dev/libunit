@@ -60,11 +60,13 @@ clean :
 
 fclean : clean
 	rm -f ${NAME}
+	rm -f test.log
 	$(MAKE) -C ${DIRLIBFT} fclean
 	$(MAKE) -C ${DIRLIBUNIT} fclean
 
 test : ${NAME}
-		./${NAME}
+		./${NAME} > test.log
+		cat test.log
 
 re : fclean all
 
