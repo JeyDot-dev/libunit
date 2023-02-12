@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   strdup_test.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jsousa-a <jsousa-a@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 14:48:10 by jsousa-a         ###   ########.fr       */
+/*   Created: 2023/02/12 13:42:05 by jsousa-a          #+#    #+#             */
+/*   Updated: 2023/02/12 15:13:16 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef STRDUP_TEST_H
+# define STRDUP_TEST_H
 
-#include <stdio.h>
-#include "libft.h"
-#include "libunit.h"
-#include "tests.h"
+int	basic_test(void);
+int	null_test(void);
+int	one_char_test(void);
+int	long_str_test(void);
+int	empty_str_test(void);
 
-
-int	main(void)
-{
-	strlen_launcher();
-	strdup_launcher();
-	atoi_launcher();
-}
+#endif

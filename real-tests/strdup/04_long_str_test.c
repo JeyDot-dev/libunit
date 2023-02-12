@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   04_long_str_test.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 14:48:10 by jsousa-a         ###   ########.fr       */
+/*   Created: 2023/02/11 12:44:41 by jsousa-a          #+#    #+#             */
+/*   Updated: 2023/02/12 15:11:30 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
 #include "libunit.h"
-#include "tests.h"
+#include "libft.h"
 
-
-int	main(void)
+int	long_str_test(void)
 {
-	strlen_launcher();
-	strdup_launcher();
-	atoi_launcher();
+	const char	*test = "\0\0\0\0";
+	if (ft_strlen(test) == strlen(test))
+		return (0);
+	else
+		return (-1);
 }

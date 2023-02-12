@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   05_single_digit_test.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: srapopor <srapopor@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/11 11:47:00 by srapopor          #+#    #+#             */
-/*   Updated: 2023/02/12 14:48:10 by jsousa-a         ###   ########.fr       */
+/*   Created: 2023/02/11 12:31:14 by srapopor          #+#    #+#             */
+/*   Updated: 2023/02/12 15:27:31 by jsousa-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
 #include "libunit.h"
-#include "tests.h"
+#include "libft.h"
 
-
-int	main(void)
+int	single_digit_test(void)
 {
-	strlen_launcher();
-	strdup_launcher();
-	atoi_launcher();
+	if (1)
+		return (0);
+	else
+		return (-1);
 }
